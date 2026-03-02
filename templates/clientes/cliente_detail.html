@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-info text-white">
+        <h4 class="mb-0">Detalle del Cliente: {{ cliente.nombre_completo }}</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Empresa:</strong> {{ cliente.empresa }}</p>
+                <p><strong>Correo Electrónico:</strong> {{ cliente.correo_electronico }}</p>
+                <p><strong>Teléfono:</strong> {{ cliente.telefono }}</p>
+                <p><strong>Ciudad:</strong> {{ cliente.ciudad }}</p>
+                <p><strong>Fecha de Registro:</strong> {{ cliente.fecha_registro|date:"d M Y" }}</p>
+            </div>
+            <div class="col-md-6">
+                <div class="alert alert-warning text-center">
+                    <h5>🌤️ Clima actual en {{ cliente.ciudad }}</h5>
+                    <h2 class="display-4">{{ clima }}</h2>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <a href="{% url 'cliente_list' %}" class="btn btn-secondary">Volver al listado</a>
+        <a href="{% url 'cliente_update' cliente.pk %}" class="btn btn-warning">Editar Cliente</a>
+    </div>
+</div>
+{% endblock %}

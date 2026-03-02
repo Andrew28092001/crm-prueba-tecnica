@@ -1,0 +1,28 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Base de datos local de SQLite (como usamos PostgreSQL, esto no se sube)
+db.sqlite3
+
+# Variables de entorno y secretos (¡Muy importante por seguridad!)
+.env
+.env.local
+
+# Archivos del sistema operativo (comunes si usas Mac o Windows)
+.DS_Store
+Thumbs.db
+
+# Configuraciones de editores de código (VS Code, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Archivos estáticos y multimedia en desarrollo
+/static/
+/media/
